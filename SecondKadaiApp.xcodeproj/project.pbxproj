@@ -12,6 +12,7 @@
 		4250475A1E2A5C520044306F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425047581E2A5C520044306F /* Main.storyboard */; };
 		4250475C1E2A5C520044306F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4250475B1E2A5C520044306F /* Assets.xcassets */; };
 		4250475F1E2A5C520044306F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4250475D1E2A5C520044306F /* LaunchScreen.storyboard */; };
+		425047671E2ACC700044306F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425047661E2ACC700044306F /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4250475B1E2A5C520044306F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4250475E1E2A5C520044306F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		425047601E2A5C520044306F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		425047661E2ACC700044306F /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				425047541E2A5C520044306F /* AppDelegate.swift */,
 				425047561E2A5C520044306F /* ViewController.swift */,
 				425047581E2A5C520044306F /* Main.storyboard */,
+				425047661E2ACC700044306F /* ResultViewController.swift */,
 				4250475B1E2A5C520044306F /* Assets.xcassets */,
 				4250475D1E2A5C520044306F /* LaunchScreen.storyboard */,
 				425047601E2A5C520044306F /* Info.plist */,
@@ -139,6 +142,7 @@
 			files = (
 				425047571E2A5C520044306F /* ViewController.swift in Sources */,
 				425047551E2A5C520044306F /* AppDelegate.swift in Sources */,
+				425047671E2ACC700044306F /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

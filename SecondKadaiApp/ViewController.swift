@@ -19,7 +19,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のコントローラーを取得
+        let resultViewController:ResultViewController = segue.destination as! ResultViewController
+        
+        // 遷移先で宣言している値に代入して渡す
+        resultViewController.x = 1
+        resultViewController.y = 1
+    }
 
-
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        
+    }
 }
 
