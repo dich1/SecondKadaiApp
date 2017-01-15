@@ -18,30 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4J-rO-zTq">
-                                <frame key="frameInset" minX="76" minY="203" width="219" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AK-y0-DZA">
-                                <frame key="frameInset" minX="170" minY="330" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="挨拶"/>
-                                <connections>
-                                    <segue destination="Tpd-1k-pKh" kind="show" id="Sfo-Dt-KKu"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p84-GQ-vXM">
-                                <frame key="frameInset" minX="92" minY="134" width="191" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DW0-Va-eVz">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p84-GQ-vXM">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4J-rO-zTq">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="BQ3-gC-ITc"/>
+                                            <constraint firstAttribute="height" constant="30" id="bEe-1U-VTa"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AK-y0-DZA">
+                                        <state key="normal" title="挨拶"/>
+                                        <connections>
+                                            <segue destination="Tpd-1k-pKh" kind="show" id="Sfo-Dt-KKu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="7jf-iJ-fuC"/>
+                                    <constraint firstItem="M4J-rO-zTq" firstAttribute="centerY" secondItem="DW0-Va-eVz" secondAttribute="centerY" id="ZXi-rq-oV2"/>
+                                    <constraint firstAttribute="width" constant="220" id="bQa-Jj-jrw"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DW0-Va-eVz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4hH-SY-Sl6"/>
+                            <constraint firstItem="DW0-Va-eVz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OEb-G5-xht"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="textField" destination="M4J-rO-zTq" id="wIZ-Ok-T3W"/>
@@ -63,16 +74,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nc9-Ae-28i">
-                                <frame key="frameInset" minX="177" minY="260" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="戻る"/>
-                                <connections>
-                                    <segue destination="l26-wz-IpZ" kind="unwind" unwindAction="unwindWithSegue:" id="12f-sI-5Xq"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nLz-jN-BDD">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nc9-Ae-28i">
+                                        <state key="normal" title="戻る"/>
+                                        <connections>
+                                            <segue destination="l26-wz-IpZ" kind="unwind" unwindAction="unwindWithSegue:" id="12f-sI-5Xq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="Nd4-sH-Je4"/>
+                                    <constraint firstAttribute="height" constant="250" id="jOe-uj-chG"/>
+                                </constraints>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="こんにちは、名前さん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pL5-O9-0Yx">
-                                <frame key="frameInset" minX="80" minY="105" width="224" height="21"/>
+                                <frame key="frameInset" minX="100" minY="255" width="174" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -80,6 +97,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nLz-jN-BDD" firstAttribute="centerX" secondItem="m6n-9e-egT" secondAttribute="centerX" id="IK6-yS-D3E"/>
+                            <constraint firstItem="nLz-jN-BDD" firstAttribute="centerY" secondItem="m6n-9e-egT" secondAttribute="centerY" id="NRN-0w-cQz"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="pL5-O9-0Yx" id="qzJ-hJ-kJC"/>
