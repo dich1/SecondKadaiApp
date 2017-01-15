@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,9 +26,15 @@ class ViewController: UIViewController {
         // segueから遷移先のコントローラーを取得
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         
-        // 遷移先で宣言している値に代入して渡す
-        resultViewController.x = 1
-        resultViewController.y = 1
+        print("エラーになりそうだけどならないで空白")
+        print(textField.text!)
+        print("nilのはずだけど空文字になる")
+        print(textField.text)
+        print("stringName")
+        print(resultViewController.stringName)
+        
+        // textのデフォルトがnilなのでオプショナル型
+        resultViewController.stringName = textField.text!
     }
 
     @IBAction func unwind(segue: UIStoryboardSegue) {

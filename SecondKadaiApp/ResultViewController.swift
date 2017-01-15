@@ -13,17 +13,17 @@ class ResultViewController: UIViewController {
     // LabelをIBOutletとして接続
     @IBOutlet weak var label: UILabel!
     
-    // 変数を宣言して初期化
-    var x:Int = 0
-    var y:Int = 0
-
+    // nilは受け付けないので通常型
+    var stringName:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         // ViewControllerからの遷移時にprepareForSegueで値が新たに代入
-        let result = x + y
-        label.text = "結果は \(result) です"
+        
+        let name = stringName
+        label.text = "こんにちは \(name) さん"
     }
 
     override func didReceiveMemoryWarning() {
